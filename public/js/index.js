@@ -7,7 +7,7 @@ var scoreURL = {
 	dURL : site + "/score_del.php",	
 }
 
-getList(6);
+getList(5);
 function getList(page){
 	$.ajax({
 		type: "get",
@@ -40,7 +40,7 @@ function getList(page){
 }
 function pagerMaker(total,page){
 	var cnt = Math.ceil(total/10); //소수점 올림.
-	var st =
+
 html = '<li class="page-item page-prev">';
 html += '<span class="page-link"><i class="fas fa-angle-double-left"></i></span>';
 html += '</li>';
@@ -59,7 +59,7 @@ html += '<li class="page-item page-next">';
 html += '<span class="page-link"><i class="fas fa-angle-double-right"></i></span>';
 html += '</li>';
 $(".pager").html(html);
-if(page==1) $("page-lt").addClass("disabled");
-if(page==cnt) $("pager-rt").addClass("disabled");
-$("pqge-ct").eq(page-1),addClass("active")
+if(page == 1) $(".page-lt").addClass("disabled");
+if(page == cnt) $(".page-rt").addClass("disabled");
+$(".page-ct").eq(page-1).addClass("active");
 }
