@@ -1,12 +1,103 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>성적관리 프로그램</title>
+  <link rel="stylesheet" href="../public/css/fa.min.css">
+  <link rel="stylesheet" href="../public/css/animate.css">
+  <link rel="stylesheet" href="../public/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../public/css/base-bootscrap.css">
+  <link rel="stylesheet" href="../public/css/index.css">
+
+  <script src="../public/js/jquery-3.4.1.min.js"></script>
+  <script src="../public/js/popper.min.js"></script>
+  <script src="../public/js/bootstrap.min.js"></script>
+  <script src="../public/js/wow.min.js"></script>
+  <script src="../public/js/imagesloaded.pkgd.min.js"></script>
 </head>
+
 <body>
-  잘 나오나요??
+  <div class="jumbotron">
+    <h2>
+      성적관리 애플리케이션<br>
+      <small class="pl-3 text-secondary">Ajax를 이용한 성적관리 SPA 애플리케이션</small>
+    </h2>
+  </div>
+  <div class="container my-5">
+    <form name="scoreForm">
+      <div><i class="fas fa-edit"></i><span class="f-125">성적 입력</span></div>
+      <div class="border border-primary m-3 p-3">
+        <div class="row">
+          <div class="col-md-2 py-1">
+            <input type="text" class="form-control" name="stdname" id="stdname" placeholder="이름">
+          </div>
+          <div class="col-md-2 py-1">
+            <input type="number" class="form-control" name="kor" id="kor" placeholder="국어">
+          </div>
+          <div class="col-md-2 py-1">
+            <input type="number" class="form-control" name="eng" id="eng" placeholder="영어">
+          </div>
+          <div class="col-md-2 py-1">
+            <input type="number" class="form-control" name="math" id="math" placeholder="수학">
+          </div>
+          <div class="col-md-4 py-1 text-center">
+            <button type="button" class="btn btn-primary">저장</button>
+            <button type="reset" class="btn btn-danger">다시작성</button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div class="scores my-5">
+      <div><i class="fas fa-edit"></i><span class="f-125">성적 리스트</span></div>
+      <table class="score-tb table table-bordered table-stripe table-hover my-2">
+        <colgroup>
+          <col style="width: 20%;">
+          <col style="width: 15%;">
+          <col style="width: 15%;">
+          <col style="width: 15%;">
+          <col style="width: 35%;">
+        </colgroup>
+        <thead class="text-center">
+          <tr>
+            <th>이름</th>
+            <th>국어</th>
+            <th>영어</th>
+            <th>수학</th>
+            <th>관리</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- <tr class="text-center">
+              <th>홍길동</th>
+              <th>80</th>
+              <th>90</th>
+              <th>75</th>
+              <th class="text-center">
+                <button class="btn btn-success">수정</button>
+                <button class="btn btn-danger">삭제</button>
+              </th>
+            </tr> -->
+        </tbody>
+      </table>
+      <ul class="pager my-4 pagination justify-content-center">
+        <!-- <li class="page-item page-lt">
+          <span class="page-link"><i class="fas fa-angle-left"></i></span>
+        </li>
+        <li class="page-item page-ct">
+          <span class="page-link">1</span>
+        </li>
+        <li class="page-item page-rt">
+          <span class="page-link"><i class="fas fa-angle-right"></i></span>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+
+
+  <script src="../public/js/index.js"></script>
 </body>
+
 </html>
