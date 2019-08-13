@@ -88,24 +88,24 @@ html += '<li class="page-item page-prev'+(prevShow?"":"disabled")+'" data-page="
 html += '<span class="page-link"><i class="fas fa-angle-left"></i></span>';
 html += '</li>';
 for(var i=stn; i<=edn; i++){
-	html += '<li class="page-item page-ct '+(page==i?"active":"")+'" data-page="'+i+'">';
+html += '<li class="page-item page-ct '+(page==i?"active":"")+'" data-page="'+i+'">';
 html += '<span class="page-link">'+i+'</span>';
 html += '</li>';
 }
-html += '<li class="page-item page-next '+(prevShow?"":"disabled")+'" data-page="'+next+'">';
+html += '<li class="page-item page-next '+(lastShow?"":"disabled")+'" data-page="'+next+'">';
 html += '<span class="page-link"><i class="fas fa-angle-right"></i></span>';
 html += '</li>';
-html += '<li class="page-item page-last'+(prevShow?"":"disabled")+'" data-page="'+last+'">';
+html += '<li class="page-item page-last'+(lastShow?"":"disabled")+'" data-page="'+last+'">';
 html += '<span class="page-link"><i class="fas fa-angle-double-right"></i></span>';
 html += '</li>';
  $(".pager").html(html);
  $(".page-item").click(function(){
-	 if(!$(this).hasClass("disabled"))
+	 if(!$(this).hasClass("disabled")) getList( $(this).data("page") );
+	});
+}
 	 //pager-item이 disabled를 가지고 있어=true클릭이 되기 때문에 fals로 만들어서 클릭이 되지 않게 만들어줌.
 	 //!-not. true=>fals로 fals=>true로 만들어줌.
-	 getList( $(this).data("page") );
- });
+ 
 /*if(page == 1) $(".page-lt").addClass("disabled");
 if(page == cnt) $(".page-rt").addClass("disabled");
 $(".page-ct").eq(page-1).addClass("active"); */
-}
