@@ -24,27 +24,29 @@
     <h2>
       성적관리 애플리케이션<br>
       <small class="pl-3 text-secondary">Ajax를 이용한 성적관리 SPA 애플리케이션</small>
+      <!-- <button class="btn btn-primary" onClick="alert('헬로');confirm('gg');alert('참')alert(거짓)">Javascript inline 코딩</button> -->
     </h2>
   </div>
   <div class="container my-5">
     <form name="scoreForm">
-      <div><i class="fas fa-edit"></i><span class="f-125">성적 입력</span></div>
+      <div><i class="fas fa-edit">
+      </i><span class="f-125">성적 입력</span></div>
       <div class="border border-primary m-3 p-3">
         <div class="row">
           <div class="col-md-2 py-1">
-            <input type="text" class="form-control" name="stdname" id="stdname" placeholder="이름">
+            <input type="text" class="form-control" placeholder="이름">
           </div>
           <div class="col-md-2 py-1">
-            <input type="number" class="form-control" name="kor" id="kor" placeholder="국어"min="0" max="100">
+            <input type="number" class="form-control" placeholder="국어"min="0" max="100">
           </div>
           <div class="col-md-2 py-1">
-            <input type="number" class="form-control" name="eng" id="eng" placeholder="영어"min="0" max="100">
+            <input type="number" class="form-control" placeholder="영어"min="0" max="100">
           </div>
           <div class="col-md-2 py-1">
-            <input type="number" class="form-control" name="math" id="math" placeholder="수학"min="0" max="100">
+            <input type="number" class="form-control" placeholder="수학"min="0" max="100">
           </div>
           <div class="col-md-4 py-1 text-center">
-            <button type="button" class="btn btn-primary" id="btSave">저장</button>
+            <button type="button" class="btn btn-primary" onclick="saveData(this, 0,'in');">저장</button>
             <button type="reset" class="btn btn-danger">다시작성</button>
           </div>
         </div>
