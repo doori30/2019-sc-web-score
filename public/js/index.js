@@ -53,7 +53,6 @@ function getList(page){
 				$(".score-tb").find("tbody").append(html);
 			}
 			pagerMaker(res.total,page);
-			deletMaker();
 		},
 		error:function(xhr){
 			alert("통신이 실패했습니다. 관리자에게 문의하세요!")
