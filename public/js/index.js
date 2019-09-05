@@ -63,7 +63,7 @@ function getData(page) {
 				html += '</tr>';
 				$(".score-tb").find("tbody").append(html);
 			}
-			pagerMaker(res.total, page);
+			pagerMaker(res.total, page);//FrontEnd
 		},
 		error: function (xhr) {
 			alert("통신이 실패했습니다. 관리자에게 문의하세요.");
