@@ -13,7 +13,7 @@ $("#bt-data-test").click(function () {
 // 전역변수
 var html = '';
 var scoreURL = {
-	site: "https://webmir.co.kr/score",
+	site: "http://webmir.co.kr/score",
 	cURL: "/score_in.php",
 	rURL: "/score_li.php",
 	uURL: "/score_up.php",
